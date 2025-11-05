@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Песенки</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "Poppins", sans-serif;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Фон всей страницы (без blur) */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("songback.png") center/cover no-repeat;
+            filter: brightness(0.5);
+            z-index: -1;
+        }
+
+        h1 {
+            text-shadow: 0 0 15px hotpink;
+            text-align: center;
+            margin-top: 30px;
+            font-size: 2em;
+        }
+
+        .songs-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 80px;
+            box-sizing: border-box;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        iframe {
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(255, 192, 203, 0.8);
+            transition: 0.3s;
+            width: 300px;
+            height: 80px;
+        }
+
+        iframe:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 25px hotpink;
+        }
+
+        /* Кнопки управления страницей */
+        .buttons {
+            position: fixed;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 40px; /* расстояние от краёв */
+        }
+
+        .btn {
+            background-color: rgba(255, 192, 203, 0.85);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 0 15px pink;
+            color: black;
+        }
+
+        .btn:hover {
+            background-color: hotpink;
+            color: white;
+            box-shadow: 0 0 20px hotpink;
+        }
+
+        /* смещаем кнопку вправо ещё сильнее */
+        .next-btn {
+            position: absolute;
+            right: 20px;
+        }
+
+        @media (max-width: 900px) {
+            .songs-container {
+                flex-direction: column;
+                align-items: center;
+                transform: translate(-50%, 0);
+                top: auto;
+                margin-top: 100px;
+            }
+
+            .buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                padding: 0;
+            }
+
+            .next-btn {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+
+<div class="songs-container">
+    <!-- Левая колонка -->
+    <div class="column" style="align-items: flex-start;">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/00aqkszH1FdUiJJWvX6iEl?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6b4YeHdXQQQJ74V1Ewo6fR?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/49dbRMbFIzlm0oIqIwojMT?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/30m6jBISwXb8XwbSC9JhgT?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2JxPgHghyuG0SKNy8htBWg?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>  </div>
+
+    <!-- Правая колонка -->
+    <div class="column" style="align-items: flex-end;">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/00aqkszH1FdUiJJWvX6iEl?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5OsHySqSwYLLfot5EswbON?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7iTyMRXGbIyGAprE9RMkGR?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7Ms58r8G6Y0r1XLtpwoGxN?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4pHQ9RYFhn3W0ha5KEuMnj?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+</div>
+
+<div class="buttons">
+    <button class="btn" onclick="window.location.href='happy.html'">⬅ Прошлая страница</button>
+    <button class="btn next-btn" onclick="window.location.href='months.html'">Следующая страница ➡</button>
+</div>
+
+</body>
+</html>

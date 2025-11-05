@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фото по месяцам</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            color: white;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Фон */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("monthsback.png") center/cover no-repeat;
+            filter: brightness(0.5);
+            z-index: -1;
+        }
+
+        h1 {
+            text-shadow: 0 0 15px hotpink;
+            text-align: center;
+            margin-top: 30px;
+            font-size: 2em;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* увеличено с 150px до 180px */
+            gap: 40px;
+            max-width: 950px;
+            margin: 60px auto;
+            justify-items: center;
+        }
+
+        .photo-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 18px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 192, 203, 0.5);
+            transition: 0.3s;
+        }
+
+        .photo-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px hotpink;
+        }
+
+        .photo-card img {
+            width: 220px; /* увеличено с 130px */
+            height: 250px; /* увеличено с 160px */
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .month {
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 0 10px hotpink;
+        }
+
+
+
+        /* Кнопки навигации */
+        .buttons {
+            position: fixed;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 40px;
+        }
+
+        .btn {
+            background-color: rgba(255, 192, 203, 0.85);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 0 15px pink;
+            color: black;
+        }
+
+        .btn:hover {
+            background-color: hotpink;
+            color: white;
+            box-shadow: 0 0 20px hotpink;
+        }
+
+        @media (max-width: 700px) {
+            .gallery {
+                gap: 25px;
+            }
+            .photo-card img {
+                width: 120px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>Смотри, котик это мы за каждый из 8 месяцев💖</h1>
+
+<div class="gallery">
+    <div class="photo-card">
+        <img src="mart.jpg" alt="Март">
+        <div class="month">March</div>
+    </div>
+    <div class="photo-card">
+        <img src="april.jpg" alt="Апрель">
+        <div class="month">April</div>
+    </div>
+    <div class="photo-card">
+        <img src="mai.jpg" alt="Май">
+        <div class="month">May</div>
+    </div>
+    <div class="photo-card">
+        <img src="juni.jpg" alt="Июнь">
+        <div class="month">June</div>
+    </div>
+    <div class="photo-card">
+        <img src="juli.jpg" alt="Июль">
+        <div class="month">July</div>
+    </div>
+    <div class="photo-card">
+        <img src="august.jpg" alt="Август">
+        <div class="month">August</div>
+    </div>
+    <div class="photo-card">
+        <img src="september.jpg" alt="Сентябрь">
+        <div class="month">September</div>
+    </div>
+    <div class="photo-card">
+        <img src="oktober.jpg" alt="Октябрь">
+        <div class="month">October</div>
+    </div>
+</div>
+
+<div class="buttons">
+    <button class="btn" onclick="window.location.href='songs.html'">⬅ Прошлая страница</button>
+    <button class="btn next-btn" onclick="window.location.href='love.html'">Следующая страница ➡</button>
+</div>
+
+</body>
+</html>

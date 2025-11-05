@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="login-container">
+    <h1>Введи парольчик 💌</h1>
+    <input type="password" id="password" placeholder="Пароль">
+    <button onclick="checkPassword()">Войти</button>
+    <p id="message"></p>
+
+    <button id="hintButton" onclick="showHint()" style="display: none;">Подсказка 🐾</button>
+
+    <div id="hint" class="hint">
+        <img src="8marta.jpg" alt="Подсказка">
+        <p>22.03.25/22:22</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С днём рождения, котик 💖</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: url("backhappy1.png") center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Poppins", sans-serif;
+            overflow: hidden;
+        }
+
+        /* Кнопка перехода (в правом нижнем углу) */
+        .next-btn {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(255, 192, 203, 0.85);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 0 15px pink;
+            color: black;
+        }
+
+        .next-btn:hover {
+            background-color: hotpink;
+            color: white;
+            box-shadow: 0 0 20px hotpink;
+        }
+
+        /* Контейнер с фото и поздравлением */
+        .photo-container {
+            position: relative;
+            width: 320px;
+            height: 320px;
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 0 25px rgba(255, 192, 203, 0.8);
+            transition: 0.3s;
+        }
+
+        .photo-container img:hover {
+            filter: brightness(0.6);
+        }
+
+        .congrats-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1.3em;
+            text-align: center;
+            width: 90%;
+            opacity: 0;
+            transition: 0.4s;
+            text-shadow: 0 0 15px hotpink;
+        }
+
+        .photo-container:hover .congrats-text {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+<!-- Кнопка перехода -->
+<button class="next-btn" onclick="window.location.href='songs.html'">➡ Следующая страница</button>
+
+<!-- Фото и текст -->
+<div class="photo-container">
+    <img src="keskfoto.jpg" alt="Моя котик 💖">
+    <div class="congrats-text">
+        <p>Котеночек, с днём рождения!<br>
+            Желаю, чтобы у моего сладкого любимого котеночка всё, всё всегда получалось, много-много лего, сисек, писек и пальчиков в писю. Я тебя люблю больше всего на свете и всегда, всегда буду рядышком с тобой, моя сладкая.❤️</p>
+    </div>
+</div>
+</body>
+</html>
